@@ -1,0 +1,471 @@
+{
+  "version": "12.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "RekognitionLambdaS3TriggerStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "RekognitionLambdaS3TriggerStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/RekognitionLambdaS3TriggerStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2",
+              "id": "f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2",
+              "packaging": "zip",
+              "sourceHash": "f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2",
+              "s3BucketParameter": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2S3Bucket4D35EB8C",
+              "s3KeyParameter": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2S3VersionKeyEC37ED51",
+              "artifactHashParameter": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2ArtifactHashF325BDF3"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/construct-compat.js:405:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:175:29)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/RekGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RekGroupA41E1449",
+            "trace": [
+              "new Group (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/group.js:106:23)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/RekUser/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RekUser3D0D460A",
+            "trace": [
+              "new User (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/user.js:52:22)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/RekUser/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RekUserDefaultPolicyE4032261",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "User.addToPrincipalPolicy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/user.js:186:34)",
+              "Function.addToPrincipal (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Function.addToPrincipalOrResource (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/grant.js:45:30)",
+              "Bucket.grant (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:429:31)",
+              "Bucket.grantReadWrite (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:328:21)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/Bucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotifications8F2E257D",
+            "trace": [
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:95:29)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:44:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:377:28)",
+              "Bucket.addObjectCreatedNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:390:21)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bucket83908E77",
+            "trace": [
+              "new Bucket (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:573:26)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/Bucket/AllowBucketNotificationsToRekognitionLambdaS3TriggerStackRekFunction8330C879": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketAllowBucketNotificationsToRekognitionLambdaS3TriggerStackRekFunction8330C87915B3782A",
+            "trace": [
+              "Function.addPermission (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:42:9)",
+              "LambdaDestination.bind (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3-notifications/lib/lambda.js:40:21)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/Classifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Classifications0C921F6C",
+            "trace": [
+              "new Table (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:456:22)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/RekFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RekFunctionServiceRole3947AEF4",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new Function (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function.js:79:35)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/RekFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RekFunctionServiceRoleDefaultPolicyD393AA84",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Function.addToRolePolicy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:60:19)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/RekFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RekFunction9837D13D",
+            "trace": [
+              "new Function (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function.js:135:26)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/AssetParameters/f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2S3Bucket4D35EB8C",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/AssetParameters/f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2S3VersionKeyEC37ED51",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/AssetParameters/f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2ArtifactHashF325BDF3",
+            "trace": [
+              "new FileAssetParameters (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:162:22)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:83:25)",
+              "Stack.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack.js:425:33)",
+              "LegacyStackSynthesizer.addFileAsset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:87:31)",
+              "new Asset (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:40:44)",
+              "AssetCode.bind (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/code.js:258:26)",
+              "new Function (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:33)",
+              "obj._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8154:58)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "Kernel._create (/tmp/tmpvtinbxbt/lib/program.js:8154:34)",
+              "Kernel.create (/tmp/tmpvtinbxbt/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC",
+            "trace": [
+              "new Role (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/role.js:72:22)",
+              "new NotificationsResourceHandler (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:31:21)",
+              "Function.singleton (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:79:22)",
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:87:91)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:44:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:377:28)",
+              "Bucket.addObjectCreatedNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:390:21)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+            "trace": [
+              "new Policy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/policy.js:56:26)",
+              "Role.addToPrincipalPolicy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/role.js:209:34)",
+              "Role.addToPolicy (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-iam/lib/role.js:221:21)",
+              "new NotificationsResourceHandler (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:37:19)",
+              "Function.singleton (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:79:22)",
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:87:91)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:44:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:377:28)",
+              "Bucket.addObjectCreatedNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:390:21)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691",
+            "trace": [
+              "new NotificationsResourceHandler (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:53:26)",
+              "Function.singleton (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource-handler.js:79:22)",
+              "BucketNotifications.createResourceOnce (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:87:91)",
+              "BucketNotifications.addNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/notifications-resource/notifications-resource.js:44:31)",
+              "Bucket.addEventNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:377:28)",
+              "Bucket.addObjectCreatedNotification (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/aws-s3/lib/bucket.js:390:21)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "construct (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9)",
+              "visit (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/RekognitionLambdaS3TriggerStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "construct (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9)",
+              "visit (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/tmp/jsii-kernel-q37nDV/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "_wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:7970:134)",
+              "Kernel._wrapSandboxCode (/tmp/tmpvtinbxbt/lib/program.js:8582:24)",
+              "ret._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:7970:107)",
+              "Kernel._ensureSync (/tmp/tmpvtinbxbt/lib/program.js:8563:28)",
+              "Kernel.invoke (/tmp/tmpvtinbxbt/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/tmp/tmpvtinbxbt/lib/program.js:9479:36)",
+              "KernelHost.run (/tmp/tmpvtinbxbt/lib/program.js:9442:22)",
+              "Immediate.setImmediate [as _onImmediate] (/tmp/tmpvtinbxbt/lib/program.js:9443:46)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      },
+      "displayName": "RekognitionLambdaS3TriggerStack"
+    }
+  }
+}

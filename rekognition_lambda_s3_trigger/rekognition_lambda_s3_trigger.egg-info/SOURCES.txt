@@ -1,0 +1,7 @@
+README.md
+setup.py
+rekognition_lambda_s3_trigger/rekognition_lambda_s3_trigger.egg-info/PKG-INFO
+rekognition_lambda_s3_trigger/rekognition_lambda_s3_trigger.egg-info/SOURCES.txt
+rekognition_lambda_s3_trigger/rekognition_lambda_s3_trigger.egg-info/dependency_links.txt
+rekognition_lambda_s3_trigger/rekognition_lambda_s3_trigger.egg-info/requires.txt
+rekognition_lambda_s3_trigger/rekognition_lambda_s3_trigger.egg-info/top_level.txt

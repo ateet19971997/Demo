@@ -1,0 +1,704 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.114.0"
+        }
+      },
+      "RekognitionLambdaS3TriggerStack": {
+        "id": "RekognitionLambdaS3TriggerStack",
+        "path": "RekognitionLambdaS3TriggerStack",
+        "children": {
+          "RekGroup": {
+            "id": "RekGroup",
+            "path": "RekognitionLambdaS3TriggerStack/RekGroup",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "RekognitionLambdaS3TriggerStack/RekGroup/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Group",
+                  "aws:cdk:cloudformation:props": {}
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnGroup",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.Group",
+              "version": "1.114.0"
+            }
+          },
+          "RekUser": {
+            "id": "RekUser",
+            "path": "RekognitionLambdaS3TriggerStack/RekUser",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "RekognitionLambdaS3TriggerStack/RekUser/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::User",
+                  "aws:cdk:cloudformation:props": {
+                    "groups": [
+                      {
+                        "Ref": "RekGroupA41E1449"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnUser",
+                  "version": "1.114.0"
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "RekognitionLambdaS3TriggerStack/RekUser/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "RekognitionLambdaS3TriggerStack/RekUser/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:GetObject*",
+                                "s3:GetBucket*",
+                                "s3:List*",
+                                "s3:DeleteObject*",
+                                "s3:PutObject*",
+                                "s3:Abort*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": [
+                                {
+                                  "Fn::GetAtt": [
+                                    "Bucket83908E77",
+                                    "Arn"
+                                  ]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "Bucket83908E77",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "RekUserDefaultPolicyE4032261",
+                        "users": [
+                          {
+                            "Ref": "RekUser3D0D460A"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Policy",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.User",
+              "version": "1.114.0"
+            }
+          },
+          "Bucket": {
+            "id": "Bucket",
+            "path": "RekognitionLambdaS3TriggerStack/Bucket",
+            "children": {
+              "Notifications": {
+                "id": "Notifications",
+                "path": "RekognitionLambdaS3TriggerStack/Bucket/Notifications",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "RekognitionLambdaS3TriggerStack/Bucket/Notifications/Resource",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.114.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "RekognitionLambdaS3TriggerStack/Bucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {}
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3.CfnBucket",
+                  "version": "1.114.0"
+                }
+              },
+              "AllowBucketNotificationsToRekognitionLambdaS3TriggerStackRekFunction8330C879": {
+                "id": "AllowBucketNotificationsToRekognitionLambdaS3TriggerStackRekFunction8330C879",
+                "path": "RekognitionLambdaS3TriggerStack/Bucket/AllowBucketNotificationsToRekognitionLambdaS3TriggerStackRekFunction8330C879",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                  "aws:cdk:cloudformation:props": {
+                    "action": "lambda:InvokeFunction",
+                    "functionName": {
+                      "Fn::GetAtt": [
+                        "RekFunction9837D13D",
+                        "Arn"
+                      ]
+                    },
+                    "principal": "s3.amazonaws.com",
+                    "sourceAccount": {
+                      "Ref": "AWS::AccountId"
+                    },
+                    "sourceArn": {
+                      "Fn::GetAtt": [
+                        "Bucket83908E77",
+                        "Arn"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnPermission",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-s3.Bucket",
+              "version": "1.114.0"
+            }
+          },
+          "Classifications": {
+            "id": "Classifications",
+            "path": "RekognitionLambdaS3TriggerStack/Classifications",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "RekognitionLambdaS3TriggerStack/Classifications/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "image_name",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "image_name",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "provisionedThroughput": {
+                      "readCapacityUnits": 5,
+                      "writeCapacityUnits": 5
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.114.0"
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "RekognitionLambdaS3TriggerStack/Classifications/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.114.0"
+            }
+          },
+          "RekFunction": {
+            "id": "RekFunction",
+            "path": "RekognitionLambdaS3TriggerStack/RekFunction",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "RekognitionLambdaS3TriggerStack/RekFunction/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "RekognitionLambdaS3TriggerStack/RekFunction/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "RekognitionLambdaS3TriggerStack/RekFunction/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "RekognitionLambdaS3TriggerStack/RekFunction/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "rekognition:DetectLabels",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                },
+                                {
+                                  "Action": [
+                                    "dynamodb:BatchGetItem",
+                                    "dynamodb:GetRecords",
+                                    "dynamodb:GetShardIterator",
+                                    "dynamodb:Query",
+                                    "dynamodb:GetItem",
+                                    "dynamodb:Scan",
+                                    "dynamodb:ConditionCheckItem",
+                                    "dynamodb:BatchWriteItem",
+                                    "dynamodb:PutItem",
+                                    "dynamodb:UpdateItem",
+                                    "dynamodb:DeleteItem"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "Classifications0C921F6C",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*",
+                                    "s3:DeleteObject*",
+                                    "s3:PutObject*",
+                                    "s3:Abort*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "Bucket83908E77",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "Bucket83908E77",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "RekFunctionServiceRoleDefaultPolicyD393AA84",
+                            "roles": [
+                              {
+                                "Ref": "RekFunctionServiceRole3947AEF4"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.114.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "RekognitionLambdaS3TriggerStack/RekFunction/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "RekognitionLambdaS3TriggerStack/RekFunction/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "RekognitionLambdaS3TriggerStack/RekFunction/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "RekognitionLambdaS3TriggerStack/RekFunction/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.114.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "RekognitionLambdaS3TriggerStack/RekFunction/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2S3Bucket4D35EB8C"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2S3VersionKeyEC37ED51"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersf66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2S3VersionKeyEC37ED51"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "RekFunctionServiceRole3947AEF4",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "BUCKET_NAME": {
+                          "Ref": "Bucket83908E77"
+                        },
+                        "TABLE_NAME": {
+                          "Ref": "Classifications0C921F6C"
+                        }
+                      }
+                    },
+                    "handler": "rekfunction.handler",
+                    "runtime": "python3.8"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.114.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "RekognitionLambdaS3TriggerStack/AssetParameters",
+            "children": {
+              "f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2": {
+                "id": "f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2",
+                "path": "RekognitionLambdaS3TriggerStack/AssetParameters/f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "RekognitionLambdaS3TriggerStack/AssetParameters/f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "RekognitionLambdaS3TriggerStack/AssetParameters/f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "RekognitionLambdaS3TriggerStack/AssetParameters/f66bb055e06b5c8729bd6a47e34ecd6f10adf6c61ab5aa1d034b469085a23ed2/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.114.0"
+            }
+          },
+          "BucketNotificationsHandler050a0587b7544547bf325f094a3db834": {
+            "id": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+            "path": "RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+            "children": {
+              "Role": {
+                "id": "Role",
+                "path": "RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.114.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "s3:PutBucketNotification",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36",
+                            "roles": [
+                              {
+                                "Ref": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.114.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.114.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.114.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "RekognitionLambdaS3TriggerStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.114.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "RekognitionLambdaS3TriggerStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "RekognitionLambdaS3TriggerStack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.114.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "RekognitionLambdaS3TriggerStack/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.114.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.114.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.114.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.114.0"
+    }
+  }
+}
